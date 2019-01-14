@@ -1,0 +1,15 @@
+<div class="container">
+
+  <button id="dropdown-button-{{_id}}" class="dropdown-button dropdown-button-{{_id}}">
+    <p class="dropdown-button-text dropdown-button-{{_id}}">{{_selectedItem.name}}</p>
+    <img class="dropdown-button-{{_id}}" src="../../assets/img/updownarrow.png">
+  </button>
+
+  <div id="dropdown-list-{{_id}}" class="dropdown-list" style="display: none">
+    <button
+      id="{{item.id}}"
+      (click)="onListItemClick($event)"
+      *ngFor="let item of _dropdownItems">{{item.name}}</button>
+  </div>
+
+</div>

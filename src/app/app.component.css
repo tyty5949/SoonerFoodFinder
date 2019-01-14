@@ -1,0 +1,25 @@
+.cta {
+  background: url("../assets/img/ou.jpg") fixed 0 -20vw;
+  background-size: 200%;
+  width: 100%;
+}
+
+.cta h1 {
+  font-family: 'Ubuntu Light', sans-serif;
+  font-weight: normal;
+  font-size: 3em;
+  margin: 0 0;
+  padding: 5vh 0 0 5vw;
+}
+
+@media (min-width: 855px) {
+  .cta {
+    background-size: 100%;
+    padding: 0 0 2.5vh 0;
+  }
+
+  .cta-content {
+    width: 100%;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="search-bar-button">
+    <div *ngFor="let selectedItem of _selectedItems" class="selected-item">
+      <h2>{{selectedItem.name}}</h2>
+      <button (click)="onSelectedItemRemove($event)" class="remove-button">
+        <p id="{{selectedItem.id}}">x</p>
+      </button>
+    </div>
+    <input id="input-{{_id}}" type="text" (keydown)="onInputKeyDown($event)">
+    <button
+      id="add-button-{{_id}}"
+      class="add-button">+</button>
+  </div>
+
+  <div id="dropdown-list-{{_id}}" class="dropdown-list" style="display: none">
+    <button
+      id="{{item.id}}"
+      *ngFor="let item of _displayList"
+      (click)="onListItemClick($event)">{{item.name}}</button>
+  </div>
+
+</div>

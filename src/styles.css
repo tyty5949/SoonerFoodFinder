@@ -1,0 +1,76 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  margin: 0 0;
+  padding: 0 0;
+  background-color: #F9F9F9;
+}
+
+nav {
+  background-color: white;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3vh 10vw;
+}
+
+nav h2 {
+  margin: 0 0;
+}
+
+.title {
+  font-size: 250%;
+  flex-basis: 80%;
+}
+
+.title em {
+  color: #841617;
+  font-style: normal;
+}
+
+.menu-icon {
+  max-width: 4em;
+  max-height: 4em;
+  flex-basis: 20%;
+}
+
+.nav-bar {
+  display: none;
+  margin: 0 0;
+}
+
+@media (min-width: 855px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-bar {
+    font-family: "Ubuntu Light", sans-serif;
+    font-size: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-bar li {
+    display: inline;
+    margin: 0 .6em;
+  }
+
+  .nav-bar li a {
+    text-decoration: none;
+    color: #2A2A2A;
+  }
+
+  .nav-bar img {
+    width: 2em;
+    height: auto;
+  }
+
+  .nav-bar #selected-tab {
+    text-decoration: underline;
+  }
+}

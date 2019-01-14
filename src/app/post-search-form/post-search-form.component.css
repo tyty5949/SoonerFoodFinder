@@ -1,0 +1,98 @@
+.search {
+  margin: 2vh 0 0 5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+}
+
+.search input {
+  font-family: 'Ubuntu Light', sans-serif;
+  color: #666666;
+  font-size: 1.75em;
+  height: 5.75vh;
+  border: 1px solid #9d9d9d;
+  min-width: 50vw;
+  padding-left: .5em;
+  outline: none;
+}
+
+.search input:focus {
+  color: black;
+}
+
+h2 {
+  font-family: 'Ubuntu Light', sans-serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  display: inline;
+  margin: 0 1vw 0 3vw;
+}
+
+.advanced-search {
+  margin: 2vh 0 0 5vw;
+}
+
+.advanced-search button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  min-height: 0;
+  cursor: pointer;
+}
+
+.advanced-search img {
+  display: inline-block;
+  padding: 0 0 0 0;
+  transform: scale(.6) translateY(.25em);
+}
+
+.advanced-search h4 {
+  display: inline-block;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
+  font-size: .8em;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Ubuntu Light', sans-serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  display: inline;
+  margin: 0 1vw 0 0;
+  width: 110px;
+}
+
+.advanced-row {
+  margin: 1vh 0 2vh 0;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.advanced-row app-selection-bar {
+  flex-grow: 1;
+}
+
+.datepicker input {
+  font-family: 'Ubuntu Light', sans-serif;
+  color: black;
+  font-size: 1em;
+  height: 5.75vh;
+  border: 1px solid #9d9d9d;
+  padding-left: .75em;
+  outline: none;
+}
+
+.datepicker mat-datepicker-toggle {
+  color: black;
+}
+
+.date-split-text {
+  margin: 0 .5em 0 .5em;
+  width: auto;
+}

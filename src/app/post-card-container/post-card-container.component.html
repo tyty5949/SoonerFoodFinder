@@ -1,0 +1,9 @@
+<div class="container">
+  <div
+    *ngFor="let post of _posts"
+    class="post-card">
+    <app-post-card
+      [post] = post>
+    </app-post-card>
+  </div>
+</div>

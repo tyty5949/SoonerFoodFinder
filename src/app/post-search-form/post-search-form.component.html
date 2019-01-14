@@ -1,0 +1,82 @@
+<div class="container">
+
+  <div class="search">
+    <label>
+      <input type="text" placeholder="Search..." (keyup)="onSearchBarKeyUp()">
+    </label>
+    <h2>Free Type:</h2>
+    <app-dropdown-list
+      [id]="1"
+      [defaultSelected]="0"
+      [dropdownItems]="_freeTypes"
+      (selectedItemEmitter)="selectedFreeTypeChange($event)">
+    </app-dropdown-list>
+  </div>
+
+  <div class="advanced-search">
+
+    <div id="advanced-search-terms" style="display: none">
+
+      <div id="advanced-tags" class="advanced-row">
+        <h3>Tags:</h3>
+        <app-selection-bar
+          [id]="2"
+          [items]="_tags"
+          (selectedItemsEmitter)="selectedTagsChange($event)">
+        </app-selection-bar>
+      </div>
+
+      <div id="advanced-status" class="advanced-row">
+        <h3>Status:</h3>
+        <app-dropdown-list
+          [id]="3"
+          [defaultSelected]="1"
+          [dropdownItems]="_statuses"
+          (selectedItemEmitter)="selectedStatusChange($event)">
+        </app-dropdown-list>
+      </div>
+
+      <div id="advanced-type" class="advanced-row">
+        <h3>Type:</h3>
+        <app-dropdown-list
+          [id]="4"
+          [defaultSelected]="0"
+          [dropdownItems]="_types"
+          (selectedItemEmitter)="selectedTypeChange($event)">
+        </app-dropdown-list>
+      </div>
+
+      <div id="advanced-date" class="advanced-row">
+        <h3>End Date:</h3>
+        <div id="datepicker-1" class="datepicker">
+          <input matInput [matDatepicker]="picker1" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </div>
+        <h3 class="date-split-text">to</h3>
+        <div id="datepicker-2" class="datepicker">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <input matInput [matDatepicker]="picker2" placeholder="Choose a date">
+          <mat-datepicker #picker2></mat-datepicker>
+        </div>
+      </div>
+
+      <div id="advanced-location" class="advanced-row">
+        <h3>Location:</h3>
+        <app-selection-bar
+          [id]="7"
+          [items]="_locations"
+          (selectedItemsEmitter)="selectedLocationsChange($event)">
+        </app-selection-bar>
+      </div>
+
+    </div>
+
+    <button id="advanced-button" (click)="onAdvancedSearchButtonClick()">
+      <img src="../../assets/img/arrow.png" id="advanced-arrow">
+      <h4 id="advanced-search-text">Advanced Search</h4>
+    </button>
+
+  </div>
+
+</div>
